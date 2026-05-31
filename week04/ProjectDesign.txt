@@ -1,0 +1,66 @@
+YouTube Video Program Design 
+VIDEO CLASS
+Attributes(Private)
+_title :string
+_author :string
+_length : int
+_comments : List<Comment>
+
+Method(Public):
+AddComment(comment : Comment) : void
+GetCommentCount() : int
+DisplayVideo() : void
+
+
+COMMENT CLASS
+Attributes(Private)
+_name : string
+_text : string
+
+Methods(Public):
+Constructor (name, text)
+Getter methods()
+
+
+Online Ordering Program Design 
+ADDRESS CLASS
+Attributes (Private):
+_street : string
+_city : string
+_state : string
+_country : string
+Methods (Public):
+IsUSA() : bool
+GetFullAddress() : string
+
+CUSTOMER CLASS
+Attributes (Private):
+_name : string
+_address : Address
+
+Methods (Public):
+GetName() : string
+GetAddress() : Address
+LivesInUSA() : bool
+
+PRODUCT CLASS
+Attributes (Private):
+_name : string
+_productId : string
+_price : double
+_quantity : int
+
+Methods (Public):
+GetTotalCost() : double
+GetProductInfo() : string
+
+ORDER CLASS
+Attributes (Private):
+_products : List<Product>
+_customer : Customer
+
+Methods (Public):
+AddProduct(product : Product) : void
+CalculateTotalCost() : double
+GetPackingLabel() : string
+GetShippingLabel() : string
