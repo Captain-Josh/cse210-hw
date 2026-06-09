@@ -28,6 +28,7 @@ public class ReflectingActivity : Activity
         };
 
     }
+
     public void Run()
     {
         DisplayStartingMessage();
@@ -38,7 +39,7 @@ public class ReflectingActivity : Activity
         ShowSpinner(3);
 
         
-        DateTime endTime = DateTime.Now.AddSeconds(_duration);
+        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
 
         while (DateTime.Now < endTime)
         {
@@ -47,8 +48,8 @@ public class ReflectingActivity : Activity
 
         DisplayEndingMessage();
 
-
     }
+
     public string GetRandomPrompt()
     {   
         Random rand = new Random();
@@ -60,6 +61,7 @@ public class ReflectingActivity : Activity
         Random rand = new Random();
         return _questions[rand.Next(_questions.Count)];
     }
+
     public void DisplayPrompt()
     {
         

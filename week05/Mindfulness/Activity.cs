@@ -1,14 +1,37 @@
 public class Activity
 {
-   protected string _name;
-   protected string _description;
-   protected int _duration;
+   private string _name;
+   private string _description;
+   private int _duration;
 
     public Activity(string name, string description)
     {
         _name =  name;
         _description = description;
     }
+    
+    
+    public void SetDuration(int duration)
+    {
+        _duration = duration;
+    }
+
+
+    public string GetName()
+    {
+        return _name;
+    }
+
+    public string GetDescription()
+    {
+        return _description;
+    }
+
+    public int GetDuration()
+    {
+        return _duration;
+    }
+
     public void DisplayStartingMessage()
     {
         Console.WriteLine($"--- {_name} ---");
@@ -19,6 +42,7 @@ public class Activity
         ShowSpinner(3);
 
     }
+
     public void DisplayEndingMessage()
     {
         Console.WriteLine("You have done a good job!");
@@ -26,6 +50,7 @@ public class Activity
         ShowSpinner(3);
        
     }
+
     public void ShowSpinner(int seconds)
     {
         
@@ -42,6 +67,7 @@ public class Activity
         }
 
     }
+
     public void ShowCountDown(int seconds)
     {
         

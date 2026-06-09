@@ -14,6 +14,7 @@ public class ListingActivity : Activity
             "Who are some of your personal heroes?"
         };
     }
+
     public void Run()
     {
         DisplayStartingMessage();
@@ -29,6 +30,7 @@ public class ListingActivity : Activity
         DisplayEndingMessage();
 
     }
+    
     public string GetRandomPrompt()
     { 
         Random rand = new Random();
@@ -36,12 +38,13 @@ public class ListingActivity : Activity
         return _prompts[index];
 
     }
+
     public List<string> GetListFromUser()
     {
         
         List<string> items = new List<string>();
         _count =0;
-        DateTime endTime = DateTime.Now.AddSeconds(_duration);
+        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
         while (DateTime.Now < endTime)
         {
             Console.Write("> ");
